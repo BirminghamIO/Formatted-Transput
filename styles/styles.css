@@ -16,6 +16,12 @@
   font-weight: bold;
 }
 
+.membership-title {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+}
+
 .outro-title {
   font-size: 18px;
   font-weight: bold;
