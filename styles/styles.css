@@ -40,3 +40,14 @@
   font-weight: bold;
   font-size: 90%;
 }
+
+.membership-goal {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+.sign-off {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 200%;
+}
