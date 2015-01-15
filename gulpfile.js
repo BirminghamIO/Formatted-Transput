@@ -5,6 +5,7 @@ var inlineCss = require('gulp-inline-css');
 var connect = require('gulp-connect');
 var imagemin = require('gulp-imagemin');
 var pngcrush = require('imagemin-pngcrush');
+var zip = require('gulp-zip');
 
 var paths = {
   html: '*.html',
@@ -45,9 +46,14 @@ gulp.task('watch', function() {
   gulp.watch([paths.html, paths.styles], ['reload']);
 });
 
+gulp.task('zip', function () {
+  return gulp.src(paths.dist+'**/*')
+  .pipe(zip('mailchimp.zip'))
+  .pipe(gulp.dest('./'));
+});
+
 gulp.task('clean', require('del').bind(null, [paths.dist]));
 
 gulp.task('build', ['inline', 'imagemin']);
 
 gulp.task('default', ['connect', 'watch']);
-
