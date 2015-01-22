@@ -11,14 +11,14 @@ var paths = {
   html: '*.html',
   styles: 'styles/*.css',
   images: 'images/*',
-  dist: 'build/',
+  dist: 'build/'
 };
 
 gulp.task('inline', function() {
   return gulp.src(paths.html)
     .pipe(inlinesource())
     .pipe(inlineCss({
-      preserveMediaQueries: true,
+      preserveMediaQueries: true
     }))
     .pipe(gulp.dest(paths.dist));
 });
@@ -33,7 +33,7 @@ gulp.task('imagemin', function() {
 
 gulp.task('connect', function() {
   connect.server({
-    livereload: true,
+    livereload: true
   });
 });
 
@@ -46,7 +46,7 @@ gulp.task('watch', function() {
   gulp.watch([paths.html, paths.styles], ['reload']);
 });
 
-gulp.task('zip', function () {
+gulp.task('mailchimp', function () {
   return gulp.src(paths.dist+'**/*')
   .pipe(zip('mailchimp.zip'))
   .pipe(gulp.dest('./'));
