@@ -1,3 +1,5 @@
+**This project has been archived, and is no longer being actively developed.**
+
 # Formatted-Transput INK-based mailer template
 
 1. Clone repo and CD into the directory.
